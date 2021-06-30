@@ -20,7 +20,7 @@ ul {
     background-color: rgb(234, 234, 234);
 }
 
-.col-8 .user-name {
+.col-8 {
     border-left: 1px solid rgb(177, 177, 177);
 }
 
@@ -48,8 +48,32 @@ ul {
     color: rgb(159, 216, 248);
 }
 
+.search-bar{
+    width: 97%;
+    border: 1px solid rgb(245,245,245);
+    background-color: white;
+    border-radius: 5px;
+    
+}
+
 .search-chat-input {
-    width: 100%;
+    width: 70%;
+    border: none;
+}
+
+.user-list{
+    background-color: rgb(245,245,245)
+    height:400px;
+}
+
+.user-slot{
+    border-bottom: 1px solid rgb(245,245,245);
+    background-color: white;
+}
+
+.last-access{
+    font-size: small;
+    color: rgb(87, 115, 131);
 }
 
 .message-section {

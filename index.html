@@ -38,11 +38,13 @@
                             <div class="text-notification">Attiva notifiche desktop</div>
                         </div>
                     </div>
-                    <div class="user-list">
-                        <i class="fas fa-search"></i>
-                        <input class="search-chat-input" type="text" placeholder="Cerca o inizia una nuova chat">
-                        <ul>
-                            <li v-for="user in contacts">
+                    <div class="user-list pt-2">
+                        <div class="search-bar mx-1 p-2">
+                            <i class="fas fa-search px-2"></i>
+                            <input class="search-chat-input" type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                        <ul class="px-0 pe-3 pt-2">
+                            <li class="user-slot ps-2 py-2" v-for="user in contacts">
                                 <img class="avatar-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
                                 {{user.name}}
                             </li>
@@ -51,9 +53,12 @@
                 </div>
                 <div class="col-8 px-0">
                     <div class="user-name d-flex justify-content-between py-2 px-2">
-                        <div>
-                            <img class="avatar-img" src="./img/avatar_io.jpg" alt="">
-                            <span>Nome utente</span>
+                        <div class="d-flex">
+                            <img class="avatar-img" src="./img/avatar_1.jpg" alt="">
+                            <div class="ps-2">
+                                <div>Michele</div>
+                                <div class="last-access">Ultimo accesso oggi alle</div>
+                            </div>
                         </div>
                         <div class="icon-user-name d-flex align-items-center">
                             <i class="fas fa-circle-notch "></i>
