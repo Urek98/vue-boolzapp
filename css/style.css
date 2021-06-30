@@ -2,13 +2,23 @@ ul {
     list-style: none;
 }
 
+.bg-green{
+    height: 20vh;
+    background-color: rgb(65,147,136);
+}
+
+.bg-grey{
+    height: 80vh;
+    background-color: rgb(216,219,214);
+}
+
 .fas {
     color: rgb(177, 177, 177);
     font-size: 22px;
 }
 
 .container {
-    border: 1px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .avatar-img {
@@ -62,8 +72,8 @@ ul {
 }
 
 .user-list{
-    background-color: rgb(245,245,245)
-    height:400px;
+    background-color: rgb(245,245,245);
+    height:442px;
 }
 
 .user-slot{
@@ -77,6 +87,21 @@ ul {
 }
 
 .message-section {
-    background-color: darksalmon;
-    height: 500px;
+    background-image: url(../img/mine.jpg);
+    height: 450px;
+}
+
+.message-bar{
+    background-color: rgb(242,238,234);
+}
+
+.messagge-bar-input{
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+}
+
+.fa-microphone , .fa-smile{
+    font-size: 30px;
+    color: rgb(108,115,118);
 }
