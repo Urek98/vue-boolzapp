@@ -1,0 +1,19 @@
+.container{
+    border: 1px solid black;
+}
+
+.avatar-img{
+    width: 50px;
+}
+
+.notification{
+    background-color: darkorchid;
+}
+
+.col-4{
+    background-color: cornflowerblue;
+}
+
+.col-8{
+    background-color: darkgray;
+}

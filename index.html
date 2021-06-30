@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="user-name">
+                        <img class="avatar-img" src="./img/avatar_io.jpg" alt="">
+                        <span>Nome utente</span>
+                    </div>
+                    <div class="notification d-flex">
+                        <i class="fas fa-bell-slash"></i>
+                        <div>
+                            <div>ricevi notifiche di nuovi messaggi</div>
+                            <div>attiva notifiche desktop</div>
+                        </div>
+                    </div>
+                    <div class="user-list">
+                        <i class="fas fa-search"></i>
+                        <input type="text">
+                        <ul>
+                            <li v-for="user in contacts">
+                                <img class="avatar-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
+                                {{user.name}}
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="col-8">
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="./js/scrypt.js"></script>
+</body>
+
+</html>
