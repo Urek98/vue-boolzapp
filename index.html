@@ -15,23 +15,32 @@
 
 <body>
     <div id="app">
-        <div class="container">
+        <div class="container mt-3">
             <div class="row">
-                <div class="col-4">
-                    <div class="user-name">
-                        <img class="avatar-img" src="./img/avatar_io.jpg" alt="">
-                        <span>Nome utente</span>
-                    </div>
-                    <div class="notification d-flex">
-                        <i class="fas fa-bell-slash"></i>
+                <div class="col-4 px-0">
+                    <div class="user-name d-flex justify-content-between p-2">
                         <div>
-                            <div>ricevi notifiche di nuovi messaggi</div>
-                            <div>attiva notifiche desktop</div>
+                            <img class="avatar-img" src="./img/avatar_io.jpg" alt="">
+                            <span>Nome utente</span>
+                        </div>
+                        <div class="icon-user-name d-flex align-items-center">
+                            <i class="fas fa-circle-notch "></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="notification d-flex p-3">
+                        <div class="bell-circle d-flex justify-content-center align-items-center">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <div class="ps-2">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <div class="text-notification">Attiva notifiche desktop</div>
                         </div>
                     </div>
                     <div class="user-list">
                         <i class="fas fa-search"></i>
-                        <input type="text">
+                        <input class="search-chat-input" type="text" placeholder="Cerca o inizia una nuova chat">
                         <ul>
                             <li v-for="user in contacts">
                                 <img class="avatar-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
@@ -39,14 +48,27 @@
                             </li>
                         </ul>
                     </div>
-
-
-
-
-
                 </div>
-                <div class="col-8">
+                <div class="col-8 px-0">
+                    <div class="user-name d-flex justify-content-between py-2 px-2">
+                        <div>
+                            <img class="avatar-img" src="./img/avatar_io.jpg" alt="">
+                            <span>Nome utente</span>
+                        </div>
+                        <div class="icon-user-name d-flex align-items-center">
+                            <i class="fas fa-circle-notch "></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="message-section">
 
+                    </div>
+                    <div class="message-bar">
+                        <i class="far fa-smile"></i>
+                        <input type="text">
+                        <i class="fas fa-microphone"></i>
+                    </div>
                 </div>
             </div>
         </div>

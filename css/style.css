@@ -1,19 +1,58 @@
-.container{
+ul {
+    list-style: none;
+}
+
+.fas {
+    color: rgb(177, 177, 177);
+    font-size: 22px;
+}
+
+.container {
     border: 1px solid black;
 }
 
-.avatar-img{
+.avatar-img {
     width: 50px;
+    border-radius: 50%;
 }
 
-.notification{
-    background-color: darkorchid;
+.user-name {
+    background-color: rgb(234, 234, 234);
 }
 
-.col-4{
-    background-color: cornflowerblue;
+.col-8 .user-name {
+    border-left: 1px solid rgb(177, 177, 177);
 }
 
-.col-8{
-    background-color: darkgray;
+.icon-user-name .fas {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.notification {
+    background-color: rgb(159, 216, 248);
+}
+
+.text-notification {
+    text-decoration: underline;
+    color: rgb(87, 115, 131);
+}
+
+.bell-circle {
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(244, 251, 254);
+}
+
+.bell-circle .fas {
+    color: rgb(159, 216, 248);
+}
+
+.search-chat-input {
+    width: 100%;
+}
+
+.message-section {
+    background-color: darksalmon;
+    height: 500px;
 }
