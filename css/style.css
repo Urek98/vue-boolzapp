@@ -11,15 +11,13 @@ ul {
     height: 80vh;
     background-color: rgb(216,219,214);
 }
+/* BACKGROUND */
 
 .fas {
     color: rgb(177, 177, 177);
     font-size: 22px;
 }
 
-.container {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
 
 .avatar-img {
     width: 50px;
