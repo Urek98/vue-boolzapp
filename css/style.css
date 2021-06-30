@@ -103,3 +103,21 @@ ul {
     font-size: 30px;
     color: rgb(108,115,118);
 }
+
+.white-message{
+    max-width: 250px;
+    background-color: rgb(255,255,255);
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: 10px 40px;
+}
+
+.green-message{
+    max-width: 250px;
+    background-color: rgb(220,248,192);
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: 10px 40px 10px 500px;
+}

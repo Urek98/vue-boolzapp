@@ -47,13 +47,17 @@
                         </div>
 
                         <!-- lista dinamicizzata di contatti -->
-                        <div class="user-list pt-2">
+                        <div class="user-list overflow-auto pt-2">
                             <div class="search-bar mx-1 p-2">
                                 <i class="fas fa-search px-2"></i>
                                 <input class="search-chat-input" type="text"
                                     placeholder="Cerca o inizia una nuova chat">
                             </div>
                             <ul class="px-0 pe-3 pt-2">
+                                <li class="user-slot ps-2 py-2 fw-bold" v-for="user in contacts">
+                                    <img class="avatar-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
+                                    {{user.name}}
+                                </li>
                                 <li class="user-slot ps-2 py-2 fw-bold" v-for="user in contacts">
                                     <img class="avatar-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
                                     {{user.name}}
@@ -82,7 +86,19 @@
                         </div>
 
                         <!-- sezione chat con messaggi -->
-                        <div class="message-section">
+                        <div class="message-section overflow-auto ">
+                            <div class="white-message">
+                                1-Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus tempora corrupti corporis quas non at id quisquam fugit. Maxime animi officia sint consectetur in id iste hic minus earum voluptatum.
+                            </div>
+                            <div class="green-message">
+                                2-Lorem ipsum dolor
+                            </div>
+                            <div class="green-message">
+                                3-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur suscipit, natus architecto doloremque molestiae impedit voluptates vitae ipsa nihil magni aut earum nulla laborum enim exercitationem omnis provident dignissimos deserunt!
+                            </div>
+                            <div class="white-message">
+                                4-Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus tempora corrupti corporis quas non at id quisquam fugit. Maxime animi officia sint consectetur in id iste hic minus earum voluptatum.
+                            </div>
                         </div>
 
                         <!-- sezione barra inserimento messaggi -->
