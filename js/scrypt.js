@@ -97,7 +97,7 @@ const app = new Vue(
             },
             responseMessage:
             {
-                date:'14/03/2025 15:21:06',
+                date: '14/03/2025 15:21:06',
                 text: 'ok',
                 status: 'received'
             }
@@ -117,13 +117,16 @@ const app = new Vue(
             },
             addText: function () {
                 this.contacts[this.chatIndex].messages.push(this.newMessage);
-                this.newMessage = "";
-                console.log(this.contacts[this.chatIndex].messages)
+                this.newMessage = {
+                    date: '14/03/2025 12:33:41',
+                    text: '',
+                    status: 'sent'
+                }
                 setTimeout(() => {
                     this.contacts[this.chatIndex].messages.push(this.responseMessage);
                 }, 2000)
-            
-                
+
+
             },
         },
     }
