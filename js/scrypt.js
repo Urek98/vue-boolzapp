@@ -89,6 +89,16 @@ const app = new Vue(
                 },
             ]
 
-        }
-    },
+        },
+        methods: {
+            checkStatus: function (status) {
+                if (status === "sent") {
+                    return 'green-message';
+                } else {
+                    return 'white-message';
+                }
+
+            }
+        },
+    }
 );
