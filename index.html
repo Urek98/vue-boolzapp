@@ -87,14 +87,17 @@
                                 {{item.text}}
                                 <div class="message-date">{{item.date}}</div>
                             </div>
-
-
                         </div>
 
                         <!-- sezione barra inserimento messaggi -->
                         <div class="message-bar py-2 d-flex justify-content-around align-items-center">
                             <i class="far fa-smile"></i>
-                            <input class="messagge-bar-input p-3 ps-4" type="text" placeholder="Scrivi un messaggio">
+                            <input 
+                            class="messagge-bar-input p-3 ps-4" 
+                            v-model="newMessage.text" 
+                            @keyup.enter="addText" 
+                            type="text" 
+                            placeholder="Scrivi un messaggio">
                             <i class="fas fa-microphone"></i>
                         </div>
                     </div>
