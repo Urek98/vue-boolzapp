@@ -54,7 +54,7 @@
                                     placeholder="Cerca o inizia una nuova chat">
                             </div>
                             <ul class="px-0 pe-3 pt-2">
-                                <li class="user-slot ps-2 py-2 fw-bold" v-for="user in contacts">
+                                <li class="user-slot ps-2 py-2 fw-bold" v-for="(user,index) in contacts" @click="move(index)">
                                     <img class="avatar-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
                                     {{user.name}}
                                 </li>
@@ -83,11 +83,12 @@
 
                         <!-- sezione chat con messaggi -->
                         <div class="message-section overflow-auto d-flex flex-column justify-content-end">
-                            <div :class="checkStatus(item.status)" v-for="(item,index) in contacts[0].messages" >
+                            <div :class="checkStatus(item.status)" v-for="(item,index) in contacts[chatIndex].messages">
                                 {{item.text}}
+                                <div class="message-date">{{item.date}}</div>
                             </div>
-                        
-                            
+
+
                         </div>
 
                         <!-- sezione barra inserimento messaggi -->

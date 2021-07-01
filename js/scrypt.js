@@ -87,7 +87,8 @@ const app = new Vue(
                         }
                     ],
                 },
-            ]
+            ],
+            chatIndex: 0,
 
         },
         methods: {
@@ -98,6 +99,9 @@ const app = new Vue(
                     return 'white-message';
                 }
 
+            },
+            move: function(index){
+                this.chatIndex = index;
             }
         },
     }
