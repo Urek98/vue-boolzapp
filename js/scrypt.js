@@ -72,7 +72,7 @@ const app = new Vue(
                 },
                 {
                     name: 'Luisa',
-                    avatar: '_4',
+                    avatar: '_6',
                     visible: true,
                     messages: [
                         {
@@ -107,6 +107,11 @@ const app = new Vue(
             getCurrentDateTime: function () {
                 const dateTimeNow = dayjs();
                 return dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
+            },
+
+            getLastAccess: function () {
+                const dateLastAccess = dayjs();
+                return dateLastAccess.format("HH:mm");
             },
 
             addText: function () {

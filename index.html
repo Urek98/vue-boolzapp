@@ -26,8 +26,8 @@
                         <!-- sezione nome utente -->
                         <div class="user-name d-flex justify-content-between p-2">
                             <div>
-                                <img class="avatar-img" src="./img/avatar_io.jpg" alt="">
-                                <span class="fw-bold">Nome utente</span>
+                                <img class="avatar-img" src="./img/avatar_7.jpg" alt="">
+                                <span class="fw-bold">Gianluca</span>
                             </div>
                             <div class="icon-user-name d-flex align-items-center">
                                 <i class="fas fa-circle-notch "></i>
@@ -69,10 +69,10 @@
                         <!-- sezione nome chat -->
                         <div class="user-name d-flex justify-content-between py-2 px-2">
                             <div class="d-flex">
-                                <img class="avatar-img" src="./img/avatar_1.jpg" alt="">
+                                <img class="avatar-img" :src="'./img/avatar' + contacts[chatIndex].avatar + '.jpg'" alt="">
                                 <div class="ps-2">
-                                    <div class="fw-bold">Michele</div>
-                                    <div class="last-access">Ultimo accesso oggi alle</div>
+                                    <div class="fw-bold">{{contacts[chatIndex].name}}</div>
+                                    <div class="last-access">Ultimo accesso oggi alle {{getLastAccess()}}</div>
                                 </div>
                             </div>
                             <div class="icon-user-name d-flex align-items-center">
