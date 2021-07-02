@@ -89,9 +89,13 @@ const app = new Vue(
                 },
             ],
             chatIndex: 0,
-            newMessage:''
+            newMessage: '',
+            searchItem: ''
         },
         methods: {
+
+            // Milestone 2 
+            // funzione per inserire colori dinamici ai messaggi
             checkStatus: function (status) {
                 if (status === "sent") {
                     return 'green-message';
@@ -100,20 +104,14 @@ const app = new Vue(
                 }
             },
 
+            // funzione per visualizzare la corretta chat
             move: function (index) {
                 this.chatIndex = index;
             },
 
-            getCurrentDateTime: function () {
-                const dateTimeNow = dayjs();
-                return dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
-            },
-
-            getLastAccess: function () {
-                const dateLastAccess = dayjs();
-                return dateLastAccess.format("HH:mm");
-            },
-
+            
+            // Milestone 3
+            // funzione che aggiunge nuovi messaggi e risponde
             addText: function () {
                 this.contacts[this.chatIndex].messages.push({
                     date: this.getCurrentDateTime(),
@@ -129,6 +127,26 @@ const app = new Vue(
                     });
                 }, 2000)
             },
+
+            // Milestone 4 
+            // funzione per filtrare e cercare i contatti
+            search: function () {
+                return this.contacts.filter(item => {
+                    return item.name.toLowerCase().includes(this.searchItem.toLowerCase());
+                });
+            },
+
+            // funzione con data e ora
+            getCurrentDateTime: function () {
+                const dateTimeNow = dayjs();
+                return dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
+            },
+            
+            // funzione solo con data
+            getLastAccess: function () {
+                const dateLastAccess = dayjs();
+                return dateLastAccess.format("HH:mm");
+            },
         },
     }
-);
+    );

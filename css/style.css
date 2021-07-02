@@ -128,3 +128,11 @@ ul {
     color: gray;
     
 }
+
+.show{
+    background-color: green;
+}
+
+.none{
+    background-color: indigo;
+}

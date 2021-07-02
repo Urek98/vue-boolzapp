@@ -47,15 +47,20 @@
                             </div>
                         </div>
 
-                        <!-- lista dinamicizzata di contatti -->
+                        <!-- barra ricerca contatti -->
                         <div class="user-list overflow-auto pt-2">
                             <div class="search-bar mx-1 p-2">
                                 <i class="fas fa-search px-2"></i>
-                                <input class="search-chat-input" type="text"
-                                    placeholder="Cerca o inizia una nuova chat">
+                                <input 
+                                @keyup="search()" 
+                                class="search-chat-input" 
+                                v-model="searchItem" 
+                                type="text"
+                                placeholder="Cerca o inizia una nuova chat">
                             </div>
+                         <!-- lista dinamicizzata di contatti -->
                             <ul class="px-0 pe-3 pt-2">
-                                <li class="user-slot ps-2 py-2 fw-bold" v-for="(user,index) in contacts" @click="move(index)">
+                                <li class="user-slot ps-2 py-2 fw-bold" v-for="(user,index) in search()" @click="move(index)">
                                     <img class="avatar-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
                                     {{user.name}}
                                 </li>
