@@ -89,19 +89,7 @@ const app = new Vue(
                 },
             ],
             chatIndex: 0,
-            newMessage:
-            {
-                date: '14/03/2025 12:33:41',
-                text: '',
-                status: 'sent'
-            },
-            responseMessage:
-            {
-                date: '14/03/2025 15:21:06',
-                text: 'ok',
-                status: 'received'
-            }
-
+            newMessage:''
         },
         methods: {
             checkStatus: function (status) {
@@ -110,23 +98,31 @@ const app = new Vue(
                 } else {
                     return 'white-message';
                 }
-
             },
+
             move: function (index) {
                 this.chatIndex = index;
             },
+
+            getCurrentDateTime: function () {
+                const dateTimeNow = dayjs();
+                return dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
+            },
+
             addText: function () {
-                this.contacts[this.chatIndex].messages.push(this.newMessage);
-                this.newMessage = {
-                    date: '14/03/2025 12:33:41',
-                    text: '',
+                this.contacts[this.chatIndex].messages.push({
+                    date: this.getCurrentDateTime(),
+                    text: this.newMessage,
                     status: 'sent'
-                }
+                });
+                this.newMessage = '';
                 setTimeout(() => {
-                    this.contacts[this.chatIndex].messages.push(this.responseMessage);
+                    this.contacts[this.chatIndex].messages.push({
+                        date: this.getCurrentDateTime(),
+                        text: 'ok',
+                        status: 'received'
+                    });
                 }, 2000)
-
-
             },
         },
     }
